@@ -82,6 +82,8 @@ class ImageEncoder(object):
             graph_def = tf.GraphDef()
             graph_def.ParseFromString(file_handle.read())
         tf.import_graph_def(graph_def, name="net")
+        # all_tensors = [tensor for op in tf.get_default_graph().get_operations() for tensor in op.values()]
+        # print(all_tensors)
         self.input_var = tf.get_default_graph().get_tensor_by_name(
             "%s:0" % input_name)
         self.output_var = tf.get_default_graph().get_tensor_by_name(
