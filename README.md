@@ -17,3 +17,6 @@
 1.`git submodule deinit -f -- a/submodule`    # removes the dir
 2. `rm -rf .git/modules/a/submodule`
 3. `git rm -f a/submodule`
+
+
+TEST
